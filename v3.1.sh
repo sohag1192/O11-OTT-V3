@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # O11 OTT Streamer v3 Installer
-# Author: root-hub-bd
-# Modified by: Md. Sohag Rana (for production readiness)
+# Modified by: Md. Sohag Rana (production-ready)
 
 set -e
 
@@ -11,7 +10,7 @@ sudo apt-get update -y
 sudo apt-get install -y ffmpeg unzip wget
 
 INSTALL_DIR="/home/o11"
-ZIP_URL="https://github.com\Sohag1190/O11-OTT-streamer-v3/raw/main/v3p.zip"
+ZIP_URL="https://github.com/sohag1192/O11-OTT-V3/raw/main/v3p.zip"
 ZIP_FILE="v3p.zip"
 LAUNCHER="v3p_launcher"
 SERVICE_NAME="o11"
@@ -45,6 +44,8 @@ Restart=on-failure
 RestartSec=3
 LimitNOFILE=infinity
 LimitNPROC=infinity
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
